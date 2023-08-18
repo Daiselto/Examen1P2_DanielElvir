@@ -3,13 +3,13 @@ package Exam1P2_DanielElvir;
 
 
 public abstract class Jugador {
-    private String Nombre;
-    private int Edad;
-    private String Nacionalidad;
-    private String Pie_Habil;
-    private int Rating;
-    private Equipo Equipo;
-    private int Agarre, Lanzamiento, Fisica, Ritmo, Entrada, Vision, Passing, Regate, Disparo;
+    protected String Nombre;
+    protected int Edad;
+    protected String Nacionalidad;
+    protected String Pie_Habil;
+    protected int Rating;
+    protected Equipo Equipo;
+    protected int Agarre, Lanzamiento, Fisica, Ritmo, Entrada, Vision, Passing, Regate, Disparo;
 
     public Jugador() {
     }
@@ -164,6 +164,8 @@ public abstract class Jugador {
         return "Nombre del Jugador: " + Nombre;
     }
     
-    public abstract void calculoRating();
+    public abstract void calculoRatingEspecial(int a, int b, int c);
+    
+    public abstract void calculoRatingNormal(int a, int b, int c, int d, int e, int f);
     
 }
