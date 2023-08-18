@@ -27,6 +27,13 @@ class Equipo {
         this.Rating = Rating;
     }
 
+    public Equipo(String Nombre, String Pais) {
+        this.Nombre = Nombre;
+        this.Pais = Pais;
+    }
+    
+    
+
     public String getNombre() {
         return Nombre;
     }
