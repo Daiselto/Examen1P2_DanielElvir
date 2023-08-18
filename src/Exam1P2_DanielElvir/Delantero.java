@@ -24,7 +24,7 @@ public class Delantero extends Jugador{
     
     
     @Override
-    public int calculoRating() {
+    public void calculoRating() {
         
     }
     
