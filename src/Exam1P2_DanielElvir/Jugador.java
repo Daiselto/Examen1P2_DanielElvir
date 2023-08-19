@@ -14,12 +14,15 @@ public abstract class Jugador {
     public Jugador() {
     }
 
-    public Jugador(String Nombre, int Edad, String Nacionalidad, String Pie_Habil) {
+    public Jugador(String Nombre, int Edad, String Nacionalidad, String Pie_Habil, Equipo Equipo) {
         this.Nombre = Nombre;
         this.Edad = Edad;
         this.Nacionalidad = Nacionalidad;
         this.Pie_Habil = Pie_Habil;
+        this.Equipo = Equipo;
     }
+
+    
 
     public Jugador(String Nombre, int Edad, String Nacionalidad, String Pie_Habil, int Rating, Equipo Equipo, int Agarre, int Lanzamiento, int Fisica, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
         this.Nombre = Nombre;

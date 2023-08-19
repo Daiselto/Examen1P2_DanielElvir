@@ -7,6 +7,7 @@ package Exam1P2_DanielElvir;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -80,11 +81,23 @@ public class Main extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         PosicionJug = new javax.swing.JComboBox<>();
         AgregarJugadorBttn = new javax.swing.JButton();
+        ListarJugador = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listaJugador = new javax.swing.JTable();
+        ListarEquipos = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listaEquipo = new javax.swing.JTable();
+        ListarEstadios = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        listaEstadio = new javax.swing.JTable();
 
         jLabel5.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FIFAAA SIUUUU");
+        setResizable(false);
 
+        jTabbedPane6.setBackground(new java.awt.Color(0, 0, 0));
         jTabbedPane6.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane6StateChanged(evt);
@@ -384,6 +397,108 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane6.addTab("Agregar Jugador", AgregarJugador);
 
+        ListarJugador.setBackground(new java.awt.Color(0, 102, 102));
+
+        listaJugador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Edad", "Nacionalidad", "Pie Habil", "Equipo"
+            }
+        ));
+        jScrollPane2.setViewportView(listaJugador);
+
+        javax.swing.GroupLayout ListarJugadorLayout = new javax.swing.GroupLayout(ListarJugador);
+        ListarJugador.setLayout(ListarJugadorLayout);
+        ListarJugadorLayout.setHorizontalGroup(
+            ListarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ListarJugadorLayout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(163, Short.MAX_VALUE))
+        );
+        ListarJugadorLayout.setVerticalGroup(
+            ListarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ListarJugadorLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+
+        jTabbedPane6.addTab("Listar Jugador", ListarJugador);
+
+        ListarEquipos.setBackground(new java.awt.Color(0, 102, 102));
+
+        listaEquipo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Nombre del Equipo", "Pais del Equipo"
+            }
+        ));
+        jScrollPane1.setViewportView(listaEquipo);
+
+        javax.swing.GroupLayout ListarEquiposLayout = new javax.swing.GroupLayout(ListarEquipos);
+        ListarEquipos.setLayout(ListarEquiposLayout);
+        ListarEquiposLayout.setHorizontalGroup(
+            ListarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListarEquiposLayout.createSequentialGroup()
+                .addContainerGap(200, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(179, 179, 179))
+        );
+        ListarEquiposLayout.setVerticalGroup(
+            ListarEquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ListarEquiposLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        jTabbedPane6.addTab("Listar Equipos", ListarEquipos);
+
+        ListarEstadios.setBackground(new java.awt.Color(0, 102, 102));
+
+        listaEstadio.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nombre del Estadio", "Ciudad", "Capacidad", "Equipo"
+            }
+        ));
+        jScrollPane3.setViewportView(listaEstadio);
+
+        javax.swing.GroupLayout ListarEstadiosLayout = new javax.swing.GroupLayout(ListarEstadios);
+        ListarEstadios.setLayout(ListarEstadiosLayout);
+        ListarEstadiosLayout.setHorizontalGroup(
+            ListarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListarEstadiosLayout.createSequentialGroup()
+                .addContainerGap(201, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(178, 178, 178))
+        );
+        ListarEstadiosLayout.setVerticalGroup(
+            ListarEstadiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ListarEstadiosLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jTabbedPane6.addTab("Listar Estadios", ListarEstadios);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -425,6 +540,77 @@ public class Main extends javax.swing.JFrame {
                 EquipoJug.setModel(modelo);
             }
         }
+        
+        if (jTabbedPane6.getSelectedIndex() == 3) {
+            try {
+
+            //limpiar tabla
+            listaJugador.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{
+                        "Nombre", "Edad", "Nacionalidad", "Pie Habil", "Equipo"
+                    }
+            ));
+
+            // TODO add your handling code here:            
+            Equipo seleccionado=equipos.get(EquipoJug.getSelectedIndex());
+            for (Jugador t : seleccionado.getPlantilla()) {
+                Object[] row = {t.getNombre(), t.getEdad(), t.getNacionalidad(), t.getPie_Habil(), t.getEquipo().toString()};
+                DefaultTableModel modelo = (DefaultTableModel) listaJugador.getModel();
+                modelo.addRow(row);
+                listaJugador.setModel(modelo);            
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        }
+        
+        if (jTabbedPane6.getSelectedIndex() == 4) {
+             try {
+
+            //limpiar tabla
+            listaEquipo.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{
+                        "Nombre del Equipo", "Pais del Equipo", 
+                    }
+            ));
+
+            // TODO add your handling code here:                        
+            for (Equipo t : equipos) {
+                Object[] row = {t.getNombre(), t.getPais()};
+                DefaultTableModel modelo = (DefaultTableModel) listaEquipo.getModel();
+                modelo.addRow(row);
+                listaEquipo.setModel(modelo);            
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        }
+        
+        if (jTabbedPane6.getSelectedIndex() == 5) {
+             try {
+
+            //limpiar tabla
+            listaEstadio.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{
+                        "Nombre del Estadio", "Ciudad", "Capacidad", "Equipo"
+                    }
+            ));
+
+            // TODO add your handling code here:            
+            
+            for (Estadio t : estadios) {
+                Object[] row = {t.getNombre(), t.getCiudad(), t.getCapacidad(), t.getEquipo().toString()};
+                DefaultTableModel modelo = (DefaultTableModel) listaEstadio.getModel();
+                modelo.addRow(row);
+                listaEstadio.setModel(modelo);            
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        }
 
 
     }//GEN-LAST:event_jTabbedPane6StateChanged
@@ -453,28 +639,32 @@ public class Main extends javax.swing.JFrame {
                 String nombre = NomJug.getText();
                 int Edad = Integer.parseInt(EdadJug.getText());
                 String Nacionalidad = NacionJug.getText();
-                seleccion.getPlantilla().add(new Portero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString()));
+                Equipo equipo = (Equipo)EquipoJug.getSelectedItem();
+                seleccion.getPlantilla().add(new Portero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString(), equipo));
                 JOptionPane.showMessageDialog(this, "Portero agregado exitosamente");
             } else if (PosicionJug.getSelectedItem().toString().equalsIgnoreCase("Defensa")) {
                 Equipo seleccion = equipos.get(EquipoJug.getSelectedIndex());
                 String nombre = NomJug.getText();
                 int Edad = Integer.parseInt(EdadJug.getText());
                 String Nacionalidad = NacionJug.getText();
-                seleccion.getPlantilla().add(new Defensa(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString()));
+                Equipo equipo = (Equipo)EquipoJug.getSelectedItem();
+                seleccion.getPlantilla().add(new Portero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString(), equipo));
                 JOptionPane.showMessageDialog(this, "Defensa agregado exitosamente");
             } else if (PosicionJug.getSelectedItem().toString().equalsIgnoreCase("Medio Campista")) {
                 Equipo seleccion = equipos.get(EquipoJug.getSelectedIndex());
                 String nombre = NomJug.getText();
                 int Edad = Integer.parseInt(EdadJug.getText());
                 String Nacionalidad = NacionJug.getText();
-                seleccion.getPlantilla().add(new MedioCampista(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString()));
+                Equipo equipo = (Equipo)EquipoJug.getSelectedItem();
+                seleccion.getPlantilla().add(new Portero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString(), equipo));
                 JOptionPane.showMessageDialog(this, "Medio Campista agregado exitosamente");
             } else if (PosicionJug.getSelectedItem().toString().equalsIgnoreCase("Delantero")) {
                 Equipo seleccion = equipos.get(EquipoJug.getSelectedIndex());
                 String nombre = NomJug.getText();
                 int Edad = Integer.parseInt(EdadJug.getText());
                 String Nacionalidad = NacionJug.getText();
-                seleccion.getPlantilla().add(new Delantero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString()));
+                Equipo equipo = (Equipo)EquipoJug.getSelectedItem();
+                seleccion.getPlantilla().add(new Portero(nombre, Edad, Nacionalidad, PieHabil.getSelectedItem().toString(), equipo));
                 JOptionPane.showMessageDialog(this, "Delantero agregado exitosamente");
             }
             }else{
@@ -536,6 +726,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> EquipoJug;
     private javax.swing.JLabel EstEquipTXT;
     private javax.swing.JComboBox<String> ListEquipos;
+    private javax.swing.JPanel ListarEquipos;
+    private javax.swing.JPanel ListarEstadios;
+    private javax.swing.JPanel ListarJugador;
     private javax.swing.JTextField NacionJug;
     private javax.swing.JTextField NomCiudad;
     private javax.swing.JLabel NomCiudadTXT;
@@ -560,6 +753,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane6;
+    private javax.swing.JTable listaEquipo;
+    private javax.swing.JTable listaEstadio;
+    private javax.swing.JTable listaJugador;
     // End of variables declaration//GEN-END:variables
 }
