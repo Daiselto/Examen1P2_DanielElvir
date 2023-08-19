@@ -36,6 +36,13 @@ public class Main extends javax.swing.JFrame {
         modelo1.addElement("Derecha");
         modelo1.addElement("Izquierda");
         PieHabil.setModel(modelo1);
+
+        DefaultComboBoxModel modelo2
+                = (DefaultComboBoxModel) PieHabil1.getModel();
+        modelo2.removeAllElements();
+        modelo2.addElement("Derecha");
+        modelo2.addElement("Izquierda");
+        PieHabil1.setModel(modelo2);
     }
 
     /**
@@ -108,6 +115,7 @@ public class Main extends javax.swing.JFrame {
         cb_jugadores = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -660,15 +668,25 @@ public class Main extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
 
+        jLabel26.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel26.setText("Modificar Equipo");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1035, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(415, 415, 415)
+                .addComponent(jLabel26)
+                .addContainerGap(436, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 502, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel26)
+                .addContainerGap(445, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("Modificar Equipo", jPanel2);
@@ -939,17 +957,17 @@ public class Main extends javax.swing.JFrame {
                 ex.printStackTrace();
             }
         }
-        
-        if (jTabbedPane6.getSelectedIndex() == 6){
-           cb_jugadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{}));
-           Equipo seleccionado = equipos.get(cb_jugadores.getSelectedIndex());
-            for (Jugador t : seleccionado.getPlantilla()) {                
-                
+
+        if (jTabbedPane6.getSelectedIndex() == 6) {
+            cb_jugadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{}));
+            Equipo seleccionado = equipos.get(EquipoJug.getSelectedIndex());
+            for (Jugador t : seleccionado.getPlantilla()) {
+
                 DefaultComboBoxModel modelo
                         = (DefaultComboBoxModel) cb_jugadores.getModel();
                 modelo.addElement(t);
                 cb_jugadores.setModel(modelo);
-            } 
+            }
         }
 
         if (jTabbedPane6.getSelectedIndex() == 9) {
@@ -1045,10 +1063,10 @@ public class Main extends javax.swing.JFrame {
             if (r == 0) {
                 DefaultTableModel modelo = (DefaultTableModel) listaJugador1.getModel();
                 modelo.removeRow(listaJugador1.getSelectedRow());
-                
+
                 JOptionPane.showMessageDialog(this, "Se eliminó exitosamente");
 
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(this, "No se pudo eliminar");
             }
 
@@ -1058,7 +1076,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cb_jugadoresItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_jugadoresItemStateChanged
-        
+
     }//GEN-LAST:event_cb_jugadoresItemStateChanged
 
     /**
@@ -1151,6 +1169,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
